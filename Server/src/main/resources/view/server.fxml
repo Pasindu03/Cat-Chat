@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="614.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServerController">
+   <children>
+      <TextField fx:id="txtPassWord" layoutX="58.0" layoutY="316.0" prefHeight="25.0" prefWidth="231.0" stylesheets="@css/server.css" />
+      <TextArea fx:id="txtArea" editable="false" layoutX="355.0" layoutY="141.0" prefHeight="400.0" prefWidth="473.0" stylesheets="@css/server.css">
+         <font>
+            <Font name="Lucida Console" size="12.0" />
+         </font></TextArea>
+      <TextField fx:id="txtMessage" layoutX="358.0" layoutY="550.0" onAction="#sendTextOnAction" prefHeight="25.0" prefWidth="378.0" stylesheets="@css/server.css" />
+      <JFXButton fx:id="send" buttonType="RAISED" layoutX="749.0" layoutY="550.0" onAction="#sendOnAction" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: aqua;" stylesheets="@css/server.css" text="Send">
+         <font>
+            <Font name="Lucida Console" size="13.0" />
+         </font></JFXButton>
+      <Label layoutX="309.0" layoutY="58.0" prefHeight="30.0" prefWidth="307.0" text="Cat Chat - Chat Server" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtClientName" layoutX="58.0" layoutY="245.0" prefHeight="25.0" prefWidth="231.0" stylesheets="@css/server.css" />
+      <JFXButton fx:id="add" buttonType="RAISED" layoutX="176.0" layoutY="382.0" onAction="#addClientOnAction" ripplerFill="#4ff514" style="-fx-border-color: lime;" stylesheets="@css/server.css" text="Add Client">
+         <font>
+            <Font name="Lucida Console" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="remove" buttonType="RAISED" layoutX="77.0" layoutY="382.0" onAction="#remClientOnAction" ripplerFill="#f61111" style="-fx-border-color: red;" stylesheets="@css/server.css" text="Remove">
+         <font>
+            <Font name="Lucida Console" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="96.0" layoutY="153.0" prefHeight="30.0" prefWidth="154.0" text="Add or remove client" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="129.0" layoutY="471.0" onAction="#shutDownOnAction" prefHeight="57.0" prefWidth="54.0" stylesheets="@css/server.css">
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="54.0" pickOnBounds="true">
+               <image>
+                  <Image url="@img/power-on.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="108.0" layoutY="548.0" prefHeight="30.0" prefWidth="113.0" text="Server Shutdown" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="122.0" endY="30.0" layoutX="170.0" layoutY="419.0" startX="-117.0" startY="30.0" />
+      <Label layoutX="58.0" layoutY="219.0" prefHeight="24.0" prefWidth="81.0" text="username" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="286.0" prefHeight="24.0" prefWidth="81.0" text="password" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
